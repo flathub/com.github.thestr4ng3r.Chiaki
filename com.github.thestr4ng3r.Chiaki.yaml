@@ -5,7 +5,6 @@ sdk: org.kde.Sdk
 command: chiaki
 rename-icon: chiaki
 rename-desktop-file: chiaki.desktop
-rename-appdata-file: chiaki.appdata.xml
 separate-locales: false
 finish-args:
   - --share=network
@@ -107,7 +106,8 @@ modules:
         url: https://github.com/thestr4ng3r/chiaki.git
         tag: v1.3.0
         commit: 702d31eb01d37518e77f5c1be3ea493df9f18323
-      - type: patch
-        path: AppStream.patch
+      - type: file
+        path: com.github.thestr4ng3r.Chiaki.appdata.xml
     post-install:
       - "install -Dm755 ../scripts/psn-account-id.py /app/bin/psn-account-id"
+      - "install -Dm644 ../com.github.thestr4ng3r.Chiaki.appdata.xml /app/share/metainfo/com.github.thestr4ng3r.Chiaki.appdata.xml"
