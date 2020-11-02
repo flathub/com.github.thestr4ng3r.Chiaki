@@ -17,16 +17,6 @@ finish-args:
   - --env=DBUS_FATAL_WARNINGS=0
   - --talk-name=org.freedesktop.ScreenSaver
 
-add-extensions:
-  org.freedesktop.Platform.VAAPI.Intel:
-    directory: lib/intel-vaapi-driver
-    add-ld-path: lib
-    version: '20.08'
-    no-autodownload: true
-    autodelete: false
-    download-if: active-gl-driver
-    enable-if: active-gl-driver
-
 modules:
   - name: protobuf-compilers
     sources:
