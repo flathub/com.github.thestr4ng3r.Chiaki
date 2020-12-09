@@ -101,3 +101,4 @@ modules:
     post-install:
       - "install -Dm755 ../scripts/psn-account-id.py /app/bin/psn-account-id"
       - "install -Dm644 ../com.github.thestr4ng3r.Chiaki.appdata.xml /app/share/metainfo/com.github.thestr4ng3r.Chiaki.appdata.xml"
+
